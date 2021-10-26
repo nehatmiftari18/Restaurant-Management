@@ -1,0 +1,901 @@
+{
+	"info": {
+		"_postman_id": "c327c232-49c5-4816-ac28-65faf5bc9584",
+		"name": "Toptal-Task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Owner",
+			"item": [
+				{
+					"name": "Signup - Owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"david.kuczynski.22@outlook.com\",\n    \"fullname\": \"David Kuczynski\",\n    \"role\": \"owner\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Owner",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"david.kuczynski.22@outlook.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTkwZTJiNTU4OWVjNzcxN2RkYyIsImlhdCI6MTYzMDMzNzg0MiwiZXhwIjoxNjMwNDI0MjQyfQ.OXxwRDBWL2mSMtFdkc37GNVYGzWJPQM5vjO5gdwkC00",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Coffee Shop\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/restaurants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"restaurants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTkwZTJiNTU4OWVjNzcxN2RkYyIsImlhdCI6MTYzMDMzNzg0MiwiZXhwIjoxNjMwNDI0MjQyfQ.OXxwRDBWL2mSMtFdkc37GNVYGzWJPQM5vjO5gdwkC00",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Coffee Shop Update\",\n    \"owner\": \"612cfa90e2b5589ec7717ddc\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/restaurants/612cfd2fe7abe49ef5ec5d59/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								"612cfd2fe7abe49ef5ec5d59",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant - Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTkwZTJiNTU4OWVjNzcxN2RkYyIsImlhdCI6MTYzMDMzNzg0MiwiZXhwIjoxNjMwNDI0MjQyfQ.OXxwRDBWL2mSMtFdkc37GNVYGzWJPQM5vjO5gdwkC00",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/restaurants/612cfd2fe7abe49ef5ec5d59/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								"612cfd2fe7abe49ef5ec5d59",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review - Get Pending Reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTkwZTJiNTU4OWVjNzcxN2RkYyIsImlhdCI6MTYzMDMzOTE4MSwiZXhwIjoxNjMwNDI1NTgxfQ.QhGeTGnRdpe-EM5hXsZnrDUW6qj-yUf9dPaIkDOymQ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/reviews/pending",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"pending"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review - Reply Comment",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTkwZTJiNTU4OWVjNzcxN2RkYyIsImlhdCI6MTYzMDMzOTE4MSwiZXhwIjoxNjMwNDI1NTgxfQ.QhGeTGnRdpe-EM5hXsZnrDUW6qj-yUf9dPaIkDOymQ4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"replyComment\": \"Thank you for your feedback\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/reviews/612cff23e7abe49ef5ec5d9b/reply",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"612cff23e7abe49ef5ec5d9b",
+								"reply"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Regular",
+			"item": [
+				{
+					"name": "Signup - Regular User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"david@joinfitapp.com\",\n    \"fullname\": \"David Kuczynski\",\n    \"role\": \"regular\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Regular",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"david@joinfitapp.com\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant - Create Review",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmZGQ3ZTdhYmU0OWVmNWVjNWQ4OCIsImlhdCI6MTYzMDMzODc4NiwiZXhwIjoxNjMwNDI1MTg2fQ.8pyx0K9E1OSx62uzKU-9_Efooxu-9OZB0IpExUPoFvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rate\": 5,\n    \"visited\": \"2021-08-10T15:53:59.000Z\",\n    \"comment\": \"Thank you\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/restaurants/612cfd2fe7abe49ef5ec5d59/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								"612cfd2fe7abe49ef5ec5d59",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant - Get Reviews",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmZGQ3ZTdhYmU0OWVmNWVjNWQ4OCIsImlhdCI6MTYzMDMzODc4NiwiZXhwIjoxNjMwNDI1MTg2fQ.8pyx0K9E1OSx62uzKU-9_Efooxu-9OZB0IpExUPoFvQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/restaurants/612cfd2fe7abe49ef5ec5d59/reviews",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								"612cfd2fe7abe49ef5ec5d59",
+								"reviews"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "Login - Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review - Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"rate\": 5,\n    \"comment\": \"Admin updated comment\",\n    \"replyComment\": \"Admin updated reply comment.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/reviews/612cff23e7abe49ef5ec5d9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"612cff23e7abe49ef5ec5d9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review - Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/reviews/612cff23e7abe49ef5ec5d9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"612cff23e7abe49ef5ec5d9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Get List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Get User Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/612cfa90e2b5589ec7717ddc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"612cfa90e2b5589ec7717ddc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"david@gmail.com\",\n    \"fullname\": \"David Kuczynski - regular\",\n    \"role\": \"regular\",\n    \"password\": \"12345678\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"david.kuczynski.22@outlook.com\",\n    \"fullname\": \"David Kuczynski - updated\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/612cfa90e2b5589ec7717ddc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"612cfa90e2b5589ec7717ddc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users - Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/612d07699b834d0499ce92d5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"612d07699b834d0499ce92d5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Common",
+			"item": [
+				{
+					"name": "Review - Get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/reviews/612cff23e7abe49ef5ec5d9b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"reviews",
+								"612cff23e7abe49ef5ec5d9b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant - Get List",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTkwZTJiNTU4OWVjNzcxN2RkYyIsImlhdCI6MTYzMDMzNzg0MiwiZXhwIjoxNjMwNDI0MjQyfQ.OXxwRDBWL2mSMtFdkc37GNVYGzWJPQM5vjO5gdwkC00",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/restaurants?min=0&max=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"restaurants"
+							],
+							"query": [
+								{
+									"key": "min",
+									"value": "0"
+								},
+								{
+									"key": "max",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Restaurant - Get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTkwZTJiNTU4OWVjNzcxN2RkYyIsImlhdCI6MTYzMDMzNzg0MiwiZXhwIjoxNjMwNDI0MjQyfQ.OXxwRDBWL2mSMtFdkc37GNVYGzWJPQM5vjO5gdwkC00",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/api/v1/restaurants/612cfd2fe7abe49ef5ec5d59/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"restaurants",
+								"612cfd2fe7abe49ef5ec5d59",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Profile Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"fullname\": \"Admin User\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Password Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxMmNmYTU1ZTJiNTU4OWVjNzcxN2RkYSIsImlhdCI6MTYzMDMzOTgzNCwiZXhwIjoxNjMwNDI2MjM0fQ.mBuqJ_H6CK_S_39abJNsgP7V2OlMfx8wyPyP3yYXeNI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"oldPassword\": \"password\",\n    \"newPassword\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8000/api/v1/users/password",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"password"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
